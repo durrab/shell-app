@@ -1,0 +1,26 @@
+{
+  "": {
+    "numberOfColumns": 1,
+    "fields": [
+      {
+        "key": "displayName",
+        "name": "Project Name",
+        "type": "STRING",
+        "isNotEditable": true,
+        "required": true,
+        "placeholder": "A human readable name."
+      },
+      {
+        "key": "projectId",
+        "type": "MESSAGE",
+        "message": "<bold>Project ID</bold> will be auto generated."
+      },
+      {
+        "key": "activeDirectoryGroup",
+        "name": "Active Directory Group",
+        "type": "AD_GROUP",
+        "required": true
+      }
+    ]
+  }
+}

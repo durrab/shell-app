@@ -1,0 +1,102 @@
+/**
+To apply the same style as we have in npm-packages' "styled-components" configuration.
+Somehow those styles are not applied when loading Antd v4 remote subapp in a Antd v3 Hub Shell.
+ */
+div.sc-iwsKbI {
+    display: block;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 5px 0;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+span.sc-ifAKCX {
+    display: block;
+    padding: 10px 15px;
+    font-family: Bogle, sans-serif;
+    font-size: 12.8px;
+    color: rgb(51, 51, 51);
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+/**
+Temporary workaround to put a border around StratiTable body.
+ */
+.app-content > .resource-list-wrapper .ant-table table {
+    border: 1px solid rgb(217, 217, 217);
+}
+
+/**
+Temporary workaround for project modal content.
+ */
+/*
+1. Need margin under the tab bar. Antd v4 css has nothing vs Antd v3 has a default of 16px.
+ */
+.project .ant-tabs-bar.ant-tabs-top-bar.ant-tabs-large-bar {
+    margin-bottom: 16px;
+}
+
+/*
+2. The navigation tab bar: the disabled -prev and -next tabs are showing in Antd v4 css.
+ */
+
+.project .ant-tabs-tab-prev.ant-tabs-tab-btn-disabled {
+    display: none;
+}
+
+.project .ant-tabs-tab-next.ant-tabs-tab-btn-disabled {
+    display: none;
+}
+
+/*
+3.1. For the input field, the wrapper has display = table, which doesn't work in Antd v4 css.
+ */
+
+.project .strati-table-wrapper > div {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*
+3.2. input field has display = table-cell. That doesn't work well with Antd 4 css.
+ */
+
+.project .ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
+    display: inherit !important;
+}
+
+
+/*
+4. The pagination buttons are on the left side when Antd v4 css is loaded.
+ */
+.project ul.ant-table-pagination.ant-pagination.mini {
+    float: right;
+}
+
+/**
+5.1. Copy strati-table Styled components settings from npm-packages to fix the highlight solid "borders".
+ */
+/**
+   * Temp fix: with the select outline style above, the current value of "position" for the table
+   * cells, "td", of "relative" causes some weirdness where the edges of the tds overlap and cover
+   * up the outline. Until we find a better way to deal with that. We'll just reset the position
+   * to the default value
+   */
+.project .ant-table-tbody > tr > td,
+.project .ant-table tfoot > tr > th,
+.project .ant-table tfoot > tr > td {
+    position: unset;
+}
+
+/**
+5.2. Fix highlight of the first row below head row;
+ */
+.project .ant-table-tbody > tr.strati-table-selected-row {
+    outline-offset: -1px;
+}

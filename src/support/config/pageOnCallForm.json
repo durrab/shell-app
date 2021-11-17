@@ -1,0 +1,92 @@
+{
+  "": {
+    "numberOfColumns": 1,
+    "fields": [
+      {
+        "key": "crcReviewed",
+        "name": "Do you still want to page on-call?",
+        "type": "RADIO",
+        "initialValue": "unknown",
+        "required": false,
+        "validOptions": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          }
+        ]
+      }
+    ]
+  },
+  "Issue Details": {
+    "numberOfColumns": 3,
+    "condition": [
+      {
+        "fieldKey": "crcReviewed",
+        "check": "EQUALS",
+        "expectedValue": "yes"
+      }
+    ],
+    "fields": [
+      {
+        "key": "contactName",
+        "name": "Your Name",
+        "type": "STRING",
+        "isNotEditable": true,
+        "required": true
+      },
+      {
+        "key": "contactEmail",
+        "name": "Your Email",
+        "type": "EMAIL",
+        "isNotEditable": true,
+        "required": true
+      },
+      {
+        "key": "product",
+        "name": "Product",
+        "type": "SELECT_SINGLE",
+        "required": true,
+        "url": "/common/api/products/options"
+      },
+      {
+        "key": "callBackNumber",
+        "name": "Callback Number",
+        "type": "STRING",
+        "required": true,
+        "colSpan": 1.5,
+        "validationRules": [
+          { "min": 3 },
+          {
+            "pattern": "^[+\\-0-9(). ]+$",
+            "message": "only +, -, (, ), ., space and number allowed"
+          }
+        ]
+      },
+      {
+        "key": "summary",
+        "name": "Issue Summary",
+        "type": "STRING",
+        "required": true,
+        "colSpan": 1.5
+      },
+      {
+        "key": "businessImpact",
+        "name": "Business Impact",
+        "type": "TEXT_AREA",
+        "required": true,
+        "colSpan": 3
+      },
+      {
+        "key": "incidentDetail",
+        "name": "Details",
+        "type": "TEXT_AREA",
+        "required": true,
+        "colSpan": 3
+      }
+    ]
+  }
+}

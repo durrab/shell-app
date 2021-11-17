@@ -1,0 +1,29 @@
+.add-geofence-button { 
+    float: right;
+    margin-top: -15px;
+}
+
+.geofence-delete {
+    button {
+        margin: 0.25rem;
+    }
+    .hidden {
+        visibility: hidden;
+    }
+    .visible {
+        visibility: visible !important;
+    }    
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: all 0.4s linear 0.2s;
+}
+.visible {
+    visibility: visible;
+    transition: all 0.4s linear 0.2s;
+}    

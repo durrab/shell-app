@@ -1,0 +1,42 @@
+.right-drawer .ant-card {
+    height: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.right-drawer .ant-card-body {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.right-drawer .right-drawer-collapsed .ant-card-body {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.right-drawer .trigger {
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+.right-drawer .trigger:hover {
+    cursor: pointer;
+}
+
+.right-drawer h2 {
+    padding: 0;
+}
+
+.right-drawer .ellipsized-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 16px;
+}
+
+.right-drawer .manage-btn {
+    text-align: center;
+    padding-top: 2rem;
+}

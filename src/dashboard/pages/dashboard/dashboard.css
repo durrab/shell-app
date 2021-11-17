@@ -1,0 +1,17 @@
+.registryCard {
+    cursor: pointer;
+    min-width: 375px;
+    max-width: 375px;
+    min-height: 200px;
+    max-height: 200px;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    overflow:hidden;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    border-radius: 5px;
+}
+
+.registryCard:hover {
+    border: 1px solid gray;
+}

@@ -1,0 +1,48 @@
+#
+# A sentinel policy file controls the behavior of security components and how they interact with your build.
+# The contents of the file are subject to audit and should be used to circumvent any security controls.
+# The file should be named .sentinelpolicy (notice the leading period) and be placed in the root of your repository
+#
+#
+# codescanaccess - these entries will add people to be able to view your report in CodeGate UI.  It is typically used
+#                  to add a project manager, manager, or director who has not committed code but needs to review results.
+#                  This is a comma seperated list and you can more than one of them in the file.  The input is <userid>.
+#              
+#
+codescanaccess= rwoods3
+#
+#
+# forcefullscan - Checkmarx by default does incremental scans unless 7% or more of the code changes.  This improves speed.
+#                 if you would like a full scan every time (which may improve accuracy or make two scans produce exactly
+#                 the same output you can set this value to true.  It is false by default.
+#
+#
+#forcefullscan=false
+#
+#
+# codescanpolicy - This determines which preset checkmarx uses for scanning. By default this is OWASP TOP 10 - 2017. 
+#                  you may be requested to use the PCI preset if your application handles payment card data.  The valid 
+#                  settings are:
+#                  All, OWASP TOP 10 - 2017*, PCI, SANS top 25, Android, HIPAA, Mobile, WordPress, Apple Secure Coding Guide
+#
+#
+#codescanpolicy=OWASP TOP 10 - 2017
+#
+#
+# safeline - this is used by the secrets scanner to suppress lines it detected as secrets.  If this is a true secret
+#            THIS SHOULD NOT be used to disable secrets detection.  See https://appsec.walmart.com/secrets for 
+#            proper methods on storing secrets for your application.  Multiple entries are supported within the file.
+#            The format is filename;line;comment.  All fields are required.
+#
+safeline=default.js;31;accessToken is the name of a cookie and does not contain secret info
+safeline=default.js;33;refreshToken is the name of a cookie and does not contain secret info
+#
+#
+# safefile - This is used by the secrets scanner to supress entire files that it detects.  This is mostly triggered by 
+#            filenames which may trigger the detection.  If your file contains secrets THIS SHOULD NOT be used to disable 
+#            secrets detection.  See https://appsec.walmart.com/secrets for proper methods on storing secrets for your 
+#            application.  Multiple entries are supported within the file.  The format is filename;comment.  All fields
+#            are required.
+#
+safefile=dev-proxy.key;This file is for local development only - not exploitable as reviewed by Security : ref:https://jira.walmart.com/projects/ISESTASEC/queues/issue/ISESTASEC-6251
+#

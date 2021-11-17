@@ -1,0 +1,4 @@
+    "@gtpjs/sso-pingfed": "^1.1.2",
+    "@hub/hub-resources-hapi-plugin": "../hub-resources-hapi-plugin",
+    "@hub/wcnp-hapi-plugin": "../hub-resources-hapi-plugin",
+     "electrode-config": "^1.3.2",

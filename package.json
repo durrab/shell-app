@@ -1,0 +1,100 @@
+{
+  "name": "cerence-hub-app",
+  "version": "0.0.1",
+  "description": "Cerence Hub",
+  "homepage": "http://cerence.com",
+  "scripts": {
+    "dev": "ENV=dev NODE_OPTIONS='--max-http-header-size=16384 --max-old-space-size=4096' HOST=localhost PORT=9002 xrun electrode/dev",
+    "xrun-tasks": "xrun",
+    "test": "jest",
+    "build": "npm install && NODE_OPTIONS='--max-old-space-size=5120' xrun electrode/build && npm run cp-static",
+    "cp-static": "shx cp -r static/ dist/static/",
+    "start": "node lib/server",
+    "heroku-postbuild": "xrun electrode/build",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "mock": "echo 'Starting standalone server in MOCK mode'; NODE_ENV=production ONEOPS_ENVPROFILE=mock ONEOPS_ENVIRONMENT=mock xrun mock-cloud",
+    "cdn-publish": "xrun cdn/publish",
+    "wml-release": "xrun wml-build/release",
+    "pretty-quick": "pretty-quick"
+  },
+  "author": {
+    "name": "Cerence Engineering Team",
+    "email": "durrab.khan@cerence.com"
+  },
+  "contributors": [],
+  "main": "lib/server/index.js",
+  "keywords": [
+    "cerence",
+    "electrode",
+    "hub"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">= 12",
+    "npm": ">= 6"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@babel/runtime": "^7.14.6",
+    "@xarc/app": "^10.0.4",
+    "@xarc/fastify-server": "^3.3.0",
+    "antd": "^4.16.13",
+    "axios": "^0.22.0",
+    "bluebird": "^3.7.2",
+    "bootstrap": "^5.0.2",
+    "compare-versions": "^3.6.0",
+    "electrode-confippet": "^1.7.1",
+    "electrode-cookies": "^1.0.5",
+    "electrode-server": "^3.3.0",
+    "electrode-ui-config": "^1.3.2",
+    "electrode-ui-logger": "^1.1.6",
+    "esm": "^3.2.25",
+    "frappe-gantt": "^0.5.0",
+    "immutable-set": "^2.2.1",
+    "is-docker": "^2.0.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.3",
+    "react-grid-layout": "1.2.2",
+    "react-json-view": "^1.21.3",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.2.1",
+    "react-router-use-location-state": "^2.5.0",
+    "react-use": "^13.12.2",
+    "redux": "^4.1.1",
+    "scss": "^0.2.4",
+    "styled-components": "^5.3.1",
+    "subapp-react": "^0.0.42",
+    "subapp-redux": "^1.0.50",
+    "subapp-server": "^1.3.15",
+    "subapp-web": "^1.0.50",
+    "webpack-hook-plugin": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@xarc/app-dev": "^10.0.11",
+    "@xarc/run": "^1.0.5",
+    "axios-mock-adapter": "^1.19.0",
+    "babel-jest": "^26.1.0",
+    "jest": "^25.1.0",
+    "jest-fetch-mock": "^3.0.1",
+    "shx": "^0.3.2",
+    "webpack-cli": "4.8.0",
+    "webpack": "^5.58.2",
+    "@xarc/opt-sass": "^1.0.1",
+    "webpack-hook-plugin": "^1.0.7"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./test/setupTests.js"
+    ]
+  }
+}

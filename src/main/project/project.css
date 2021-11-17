@@ -1,0 +1,31 @@
+.project_button {
+    width: 17rem;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    vertical-align:middle;
+
+    border-radius: 1.5rem;
+    background:white;
+    cursor:pointer;
+    padding: 0.2rem 0;
+}
+
+.project_button .icon{
+    padding-top: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.ellipsized_text {
+    width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:block;
+    color: black;
+    font-size: large;
+}

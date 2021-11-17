@@ -1,0 +1,44 @@
+.left-drawer.ant-drawer-left {
+  z-index: 9;
+}
+
+.left-drawer .ant-drawer-body {
+  padding: 5px 0 0 0;
+}
+
+.left-drawer a.dashboard {
+  font-weight: bold;
+}
+
+.left-drawer .ant-menu .ant-menu-item-divider.item-divider {
+  background-color: white;
+  border-bottom: solid lightgray;
+  border-bottom-width: 1px;
+  margin: 0 1rem;
+}
+
+.left-drawer .ant-menu > .ant-menu-item-divider.section-divider {
+  border: solid black;
+  margin-bottom: 5px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+}
+
+.left-drawer .ant-menu-item:hover,
+.left-drawer .ant-menu-item > a:hover,
+.left-drawer .ant-menu-item-selected > a:hover {
+  color: var(--secondary-color);
+}
+
+.left-drawer .ant-menu-item-selected,
+.left-drawer .ant-menu-item-selected > a {
+  color: var(--primary-color);
+}
+
+.left-drawer .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: var(--living-design-grey-5);
+}
+
+.left-drawer .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected:after {
+  border-right-color: var(--secondary-color);
+}
