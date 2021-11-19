@@ -42,8 +42,8 @@ production version then we can run another script
 ```
 
 ## Electrode SubApps
-This repo is extensively using Electrode Sub SubApps
-Following below are more details of how to create Electrode SubApps
+1. This repo is extensively using Electrode SubApps
+2. Following below are more details of how to create Electrode SubApps
 
 # subapp poc sample
 
