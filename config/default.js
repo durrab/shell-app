@@ -13,8 +13,9 @@ module.exports = {
   ui: {
     app_name: "Durrab",
     subapps: {
-      deal: 'http://localhost:3001/js/_remote_~.poc_subapp.js',
-      extras: 'http://localhost:3001/js/_remote_~.poc_subapp.js'
+      deal: 'http://localhost:3800/public/js/_remote_~.poc_subapp.js',
+      extras: 'http://localhost:3800/public/js/_remote_~.poc_subapp.js',
+      vehicle: "http://localhost:3800/public/js/_remote_~.poc_subapp.js"
     },
   },
   connection: {
@@ -41,5 +42,8 @@ module.exports = {
     "subapp-server": {
       enable: true
     },
+    fetchUserInfoPlugin: {
+      module: "./{{env.APP_SRC_DIR}}/server/plugins/fetch"
+    }
   }
 };

@@ -42,6 +42,15 @@ export const routesConfig = {
     isAntdV4: true,
     name:"Extras",
   },
+  "Vehicle": {
+    path: "/vehicle",
+    productId: "cloudrdbms",
+    remote: true,
+    subappId: '@hub/poc-subapp',
+    pageTitle: "Vehicle Sub App",
+    isAntdV4: true,
+    name:"Vehicle",
+  },
   "Code": {
     path: '/code',
     remote: true,

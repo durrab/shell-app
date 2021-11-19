@@ -112,11 +112,11 @@ export const App = (props) => {
               </Link>
             </Menu.Item>
             <SubMenu key='sub2' icon={<CarOutlined />} title='Vehicles'>
-              <Menu.Item key='2'>List All</Menu.Item>
-              <Menu.Item key='3'>Search By VIN</Menu.Item>
+              <Menu.Item key='2'><Link to="/vehicle/list">List All</Link></Menu.Item>
+              <Menu.Item key='3'><Link to="/vehicle/search/vin">Search By VIN</Link></Menu.Item>
               <Menu.Item key='4'>
               <Link to='/deal' className='dashboard'>
-                Search By IMEID
+              <Link to="/vehicle/search/imei">Search By IMEID</Link>
               </Link>
               </Menu.Item>
             </SubMenu>
