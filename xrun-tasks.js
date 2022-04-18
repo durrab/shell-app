@@ -1,5 +1,4 @@
 const { loadDevTasks, xrun } = require('@xarc/app-dev');
-//const { loadWmlBuildTasks } = require('@walmart/electrode-build-utils');
 const _ = require("lodash");
 
 exports.xrun = xrun;
@@ -41,7 +40,7 @@ loadDevTasks(xrun, {
     useAppWebpackConfig: true,
     cssModuleSupport: false,
     v1RemoteSubApps: {
-      name: 'hub-shell',
+      name: 'shell-app',
       shared: {
         react: {
           shareKey: 'react',
@@ -107,7 +106,7 @@ xrun.load("app", {
     task(context) {
       console.log("APP_SERVER_PORT", process.env.APP_SERVER_PORT);
       const defaultEnvs = {
-        HOST: "dev.walmart.com",
+        HOST: "dev.test.com",
         PORT: 443,
         NODE_ENV: "production",
         ONEOPS_ENVPROFILE: "dev",

@@ -1,8 +1,8 @@
 {
-  "name": "cerence-hub-app",
+  "name": "shell-app",
   "version": "0.0.1",
-  "description": "Cerence Hub",
-  "homepage": "http://cerence.com",
+  "description": "Shell App Sample",
+  "homepage": "",
   "scripts": {
     "dev": "ENV=dev NODE_OPTIONS='--max-http-header-size=16384 --max-old-space-size=4096' HOST=localhost PORT=9002 xrun electrode/dev",
     "xrun-tasks": "xrun",
@@ -18,13 +18,13 @@
     "pretty-quick": "pretty-quick"
   },
   "author": {
-    "name": "Cerence Engineering Team",
-    "email": "durrab.khan@cerence.com"
+    "name": "Durrab Jami Khan",
+    "email": "durrab@gmail.com"
   },
   "contributors": [],
   "main": "lib/server/index.js",
   "keywords": [
-    "cerence",
+    "shell",
     "electrode",
     "hub"
   ],

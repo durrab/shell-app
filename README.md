@@ -1,12 +1,12 @@
 
-# Cerence Hub App
+# Shell App Hub App
 
-Cerence hub app is a container application for 
-cerence remote application like cerence-hub-vehicle and also provide
+Shell App hub app is a container application for 
+Shell App remote application like Shell App-hub-vehicle and also provide
 the main layout for dashboard and navigation to remote microsite
 applications
 
-Cerence Hub App is using Electrode Framework https://www.electrode.io/
+Shell App Hub App is using Electrode Framework https://www.electrode.io/
 
 
 # Getting Started
@@ -15,7 +15,7 @@ Cerence Hub App is using Electrode Framework https://www.electrode.io/
 
 1. Clone the repo
 ```sh
-   git clone https://github.com/cerence/cerence-hub-app
+   git clone https://github.com/durrab/shell-app
 ```
 2. Make sure to install Node.js (minimum is v12 required) 
 and then install fyn - (fyn is just like npm with more features)

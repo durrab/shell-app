@@ -2,8 +2,6 @@
 
 const NODE_ENV = process.env.NODE_ENV;
 const isStgProd = (NODE_ENV === "production" || NODE_ENV === "staging");
-// in staging/prod mode, we don't run @babel/register
-// so load ES6 module support for node.js to handle amcharts4's code
 require = isStgProd ? require("esm")(module) : require;
 
 const { loadRuntimeSupport } = require("@xarc/app");
@@ -36,10 +34,6 @@ async function start() {
 
   // Load run time support for application
   await loadRuntimeSupport(supportOpts);
-
-  // It's recommended to access electrodeConfig.config here
-  // rather than on the root level of this file because
-  // it triggers loading the config files.
   const server = await wmlServer(config);
 
   server.ext('onRequest', (request, h) => {
